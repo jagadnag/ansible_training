@@ -6,13 +6,23 @@ ansible_connection=local
 [local]
 localhost ansible_connection=local
 
-[cisco]
+[routers]
 asr1 ansible_host=172.21.56.120
 asr2 ansible_host=172.21.56.121
 asr3 ansible_host=172.21.56.122
 
-[cisco:vars]
+[routers:vars]
 ansible_user=cisco
 ansible_ssh_pass=cisco
 ansible_connection=network_cli
 ansible_network_os=ios
+
+[nxos]
+nxos1 ansible_host=10.122.20.98
+nxos2 ansible_host=10.122.20.99
+
+[nxos:vars]
+ansible_user=admin
+ansible_ssh_pass=cisco!123
+ansible_connection=network_cli
+ansible_network_os=nxos

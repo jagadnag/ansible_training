@@ -1,0 +1,7 @@
+---
+- name: Backup NXOS config
+  hosts: nxos
+  connection: network_cli
+  tasks:
+    - nxos_config:
+        backup: yes
